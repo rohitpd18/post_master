@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Post Master</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+
+<body>
+    <!-- code start here -->
+    <!-- nav bar  -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="container my-3">
+        <!-- Greeting to welcome -->
+        <h1 id="greeting" class="my-3">Welcome to PostMaster</h1>
+
+        <!-- getting url form user  -->
+        <div class="mb-3 row">
+            <label for="inputPassword" class="col-sm-2 col-form-label">Url</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="url">
+            </div>
+        </div>
+
+        <!-- Request box -->
+        <fieldset class="mb-3 d-flex">
+            <label for="inputPassword" class="col-sm-2 col-form-label">Request Type</label>
+            <div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="requestType" value="get" id="flexRadioDefault1" >
+                    <label class="form-check-label" for="flexRadioDefault1">
+                        Get
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="requestType" value="post" id="flexRadioDefault2">
+                    <label class="form-check-label" for="flexRadioDefault2">
+                        Post
+                    </label>
+                </div>
+            </div>
+        </fieldset>
+
+        <!-- Contant Type -->
+        <fieldset class="mb-3 d-flex">
+            <label for="inputPassword" class="col-sm-2 col-form-label">Contant Type</label>
+            <div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="contantType" value="json" id="jsonRadio" checked required>
+                    <label class="form-check-label" for="flexRadioDefault1">
+                        JSON
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="contantType" value="param" id="customJson" required>
+                    <label class="form-check-label" for="flexRadioDefault2">
+                        Custom paramter
+                    </label>
+                </div>
+            </div>
+        </fieldset>
+        
+        <!-- JSON request: this will hide on click of custom radion button -->
+        <div id="requestJson">
+            <div class="mb-3 d-flex">
+                <label for="inputPassword" class="col-sm-2 col-form-label">Enter your Json</label>
+                <textarea id="requestJsonBox" class="form-control" rows="4"></textarea>
+            </div>
+        </div>
+
+        <!-- Parameter box: This will hide on click of JSON radio button -->
+        <div id="parameter">
+            <div class="d-flex my-3">
+                <label for="inputPassword" class="col-sm-2 col-form-label">Parameter 1</label>
+                <input id="parameterKey1" type="text" class="form-control me-5 " placeholder="parameter key"
+                    aria-label="First parameter">
+                <input id="parameterParameter1" type="text" class="form-control me-5"
+                    placeholder="parameter value" aria-label="Last parameter">
+                <button id="addParam" class="btn btn-primary mx-2 me-5" >+</button>
+            </div>
+        </div>
+
+
+        <!-- sumbit button  -->
+        <button id="submit" class="btn btn-primary mx-2 me-5" >Submit</button>
+
+        <!-- reponse Json -->
+        <div class="my-3 d-flex">
+            <label for="inputPassword" class="col-sm-2 col-form-label">Your response</label>
+            <textarea  id="responseJson" class="form-control" id="responseBox" rows="8"></textarea>
+        </div>
+    </div>
+
+
+
+
+
+
+    <script src="/postMaster.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
